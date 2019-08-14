@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using scribeAPI.Helper;
 using scribeAPI.Model;
+using scribeAPI.DAL;
+using AutoMapper;
+using Microsoft.AspNetCore.JsonPatch;
 
 namespace scribeAPI.Controllers
 {
@@ -18,10 +21,14 @@ namespace scribeAPI.Controllers
           public String URL { get; set; }
         }
         private readonly scriberContext _context;
+        private IVideoRepository videoRepository;
+        private readonly IMapper _mapper;
 
-        public VideosController(scriberContext context)
+        public VideosController(scriberContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
+            this.videoRepository = new VideoRepository(new scriberContext());
         }
 
         // GET: api/Videos
@@ -128,7 +135,52 @@ namespace scribeAPI.Controllers
             return video;
         }
 
-        private bool VideoExists(int id)
+        // GET api/Videos/SearchByTranscriptions/HelloWorld
+        [HttpGet("SearchByTranscriptions/{searchString}")]
+        public async Task<ActionResult<IEnumerable<Video>>> Search(string searchString)
+        {
+          if (String.IsNullOrEmpty(searchString))
+          {
+            return BadRequest("Search string cannot be null or empty.");
+          }
+
+          // Choose transcriptions that has the phrase 
+          var videos = await _context.Video.Include(video => video.Transcription).Select(video => new Video
+          {
+            VideoId = video.VideoId,
+            VideoTitle = video.VideoTitle,
+            VideoLength = video.VideoLength,
+            WebUrl = video.WebUrl,
+            ThumbnailUrl = video.ThumbnailUrl,
+            IsFavourite = video.IsFavourite,
+            Transcription = video.Transcription.Where(tran => tran.Phrase.Contains(searchString)).ToList()
+          }).ToListAsync();
+
+          // Removes all videos with empty transcription
+          videos.RemoveAll(video => video.Transcription.Count == 0);
+          return Ok(videos);  
+        }
+
+      //PUT with PATCH to handle isFavourite
+      [HttpPatch("update/{id}")]
+      public VideoDTO Patch(int id, [FromBody]JsonPatchDocument<VideoDTO> videoPatch)
+      {
+        //get original video object from the database
+        Video originVideo = videoRepository.GetVideoByID(id);
+        //use automapper to map that to DTO object
+        VideoDTO videoDTO = _mapper.Map<VideoDTO>(originVideo);
+        //apply the patch to that DTO
+        videoPatch.ApplyTo(videoDTO);
+        //use automapper to map the DTO back ontop of the database object
+        _mapper.Map(videoDTO, originVideo);
+        //update video in the database
+        _context.Update(originVideo);
+        _context.SaveChanges();
+        return videoDTO;
+      }
+
+
+    private bool VideoExists(int id)
         {
             return _context.Video.Any(e => e.VideoId == id);
         }
