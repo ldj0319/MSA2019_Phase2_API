@@ -10,11 +10,13 @@ using scribeAPI.Model;
 using scribeAPI.DAL;
 using AutoMapper;
 using Microsoft.AspNetCore.JsonPatch;
+using Microsoft.AspNetCore.Cors;
 
 namespace scribeAPI.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
+  [EnableCors("MyPolicy")]
   public class VideosController : ControllerBase
   {
         public class URLDTO {

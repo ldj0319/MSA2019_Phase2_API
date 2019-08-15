@@ -1,13 +1,15 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace scribeAPI.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
+  [EnableCors("MyPolicy")]
   public class ValuesController : ControllerBase
   {
     // GET api/values
