@@ -164,7 +164,7 @@ namespace ScribrAPI.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Video>> DeleteVideo(int id)
         {
-            List<int> videoIDlist = new List<int>(new int[] { 1, 10, 11, 12, 15 });
+            List<int> videoIDlist = new List<int>(new int[] { 1 });
             if (videoIDlist.Contains(id))
             {
                 return BadRequest("The video cannot be deleted");

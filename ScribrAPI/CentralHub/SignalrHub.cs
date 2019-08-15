@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -26,7 +26,7 @@ namespace ScribrAPI.CentralHub
 
         public async Task DeleteVideo()
         {
-            await Clients.All.SendAsync("VideoDeleted");
+            await Clients.All.SendAsync("DeleteVideo");
         }
 
         public override Task OnConnectedAsync()
