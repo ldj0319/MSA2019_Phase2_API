@@ -1,0 +1,17 @@
+C:\Users\ldj97\Desktop\my_app\MSA2019_Phase2_API\ScribeAPIUnitTests\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\ldj97\Desktop\my_app\MSA2019_Phase2_API\ScribeAPIUnitTests\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\ldj97\Desktop\my_app\MSA2019_Phase2_API\ScribeAPIUnitTests\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\ldj97\Desktop\my_app\MSA2019_Phase2_API\ScribeAPIUnitTests\bin\Debug\netcoreapp2.2\ScribeAPIUnitTests.deps.json
+C:\Users\ldj97\Desktop\my_app\MSA2019_Phase2_API\ScribeAPIUnitTests\bin\Debug\netcoreapp2.2\ScribeAPIUnitTests.runtimeconfig.json
+C:\Users\ldj97\Desktop\my_app\MSA2019_Phase2_API\ScribeAPIUnitTests\bin\Debug\netcoreapp2.2\ScribeAPIUnitTests.runtimeconfig.dev.json
+C:\Users\ldj97\Desktop\my_app\MSA2019_Phase2_API\ScribeAPIUnitTests\bin\Debug\netcoreapp2.2\ScribeAPIUnitTests.dll
+C:\Users\ldj97\Desktop\my_app\MSA2019_Phase2_API\ScribeAPIUnitTests\bin\Debug\netcoreapp2.2\scribeAPI.dll
+C:\Users\ldj97\Desktop\my_app\MSA2019_Phase2_API\ScribeAPIUnitTests\bin\Debug\netcoreapp2.2\scribeAPI.pdb
+C:\Users\ldj97\Desktop\my_app\MSA2019_Phase2_API\ScribeAPIUnitTests\obj\Debug\netcoreapp2.2\ScribeAPIUnitTests.csprojAssemblyReference.cache
+C:\Users\ldj97\Desktop\my_app\MSA2019_Phase2_API\ScribeAPIUnitTests\obj\Debug\netcoreapp2.2\ScribeAPIUnitTests.csproj.CoreCompileInputs.cache
+C:\Users\ldj97\Desktop\my_app\MSA2019_Phase2_API\ScribeAPIUnitTests\obj\Debug\netcoreapp2.2\ScribeAPIUnitTests.AssemblyInfoInputs.cache
+C:\Users\ldj97\Desktop\my_app\MSA2019_Phase2_API\ScribeAPIUnitTests\obj\Debug\netcoreapp2.2\ScribeAPIUnitTests.AssemblyInfo.cs
+C:\Users\ldj97\Desktop\my_app\MSA2019_Phase2_API\ScribeAPIUnitTests\obj\Debug\netcoreapp2.2\ScribeAPIUnitTests.csproj.CopyComplete
+C:\Users\ldj97\Desktop\my_app\MSA2019_Phase2_API\ScribeAPIUnitTests\bin\Debug\netcoreapp2.2\ScribeAPIUnitTests.pdb
+C:\Users\ldj97\Desktop\my_app\MSA2019_Phase2_API\ScribeAPIUnitTests\obj\Debug\netcoreapp2.2\ScribeAPIUnitTests.dll
+C:\Users\ldj97\Desktop\my_app\MSA2019_Phase2_API\ScribeAPIUnitTests\obj\Debug\netcoreapp2.2\ScribeAPIUnitTests.pdb

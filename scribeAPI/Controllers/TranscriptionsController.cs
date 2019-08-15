@@ -10,8 +10,8 @@ using scribeAPI.Model;
 
 namespace scribeAPI.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
+  [Route("api/[controller]")]
+  [ApiController]
   [EnableCors("MyPolicy")]
   public class TranscriptionsController : ControllerBase
     {
