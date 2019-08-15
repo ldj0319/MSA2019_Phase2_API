@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -53,7 +53,18 @@ namespace ScribrAPI
                     },
                 });
             });
+            // Add Cors
 
+            services.AddCors(o => o.AddPolicy("MyPolicy", builder => {
+
+              builder.AllowAnyOrigin()
+
+                     .AllowAnyMethod()
+
+                     .AllowAnyHeader();
+
+
+            }));
             //Registering Azure SignalR service
             services.AddSignalR();
         }
@@ -65,7 +76,7 @@ namespace ScribrAPI
             // Make sure the CORS middleware is ahead of SignalR.
             app.UseCors(builder =>
             {
-                builder.WithOrigins("http://localhost:3000")
+                builder.WithOrigins("https://jaemsa2019phase2test2.azurewebsites.net")
                     .AllowAnyHeader()
                     .AllowAnyMethod()
                     .AllowCredentials();
