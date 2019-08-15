@@ -13118,11 +13118,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ldj97\\Desktop\\my_app\\MSA2019_Phase2\\scribeAPI\\scribeAPI\\scribeAPI.csproj",
+      "projectUniqueName": "C:\\Users\\ldj97\\Desktop\\my_app\\MSA2019_Phase2_API\\scribeAPI\\scribeAPI.csproj",
       "projectName": "scribeAPI",
-      "projectPath": "C:\\Users\\ldj97\\Desktop\\my_app\\MSA2019_Phase2\\scribeAPI\\scribeAPI\\scribeAPI.csproj",
+      "projectPath": "C:\\Users\\ldj97\\Desktop\\my_app\\MSA2019_Phase2_API\\scribeAPI\\scribeAPI.csproj",
       "packagesPath": "C:\\Users\\ldj97\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ldj97\\Desktop\\my_app\\MSA2019_Phase2\\scribeAPI\\scribeAPI\\obj\\",
+      "outputPath": "C:\\Users\\ldj97\\Desktop\\my_app\\MSA2019_Phase2_API\\scribeAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
