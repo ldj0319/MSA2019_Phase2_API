@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using ScribrAPI.Model;
 using ScribrAPI.DAL;
 using ScribrAPI.Helper;
+using Microsoft.AspNetCore.Cors;
 
 namespace ScribrAPI.Controllers
 {
@@ -20,6 +21,7 @@ namespace ScribrAPI.Controllers
 
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors("MyPolicy")]
     public class VideosController : ControllerBase
     {
         private IVideoRepository videoRepository;
