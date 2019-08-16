@@ -21,7 +21,7 @@ namespace ScribrAPI.Controllers
 
     [Route("api/[controller]")]
     [ApiController]
-    [EnableCors("MyPolicy")]
+    // [EnableCors("MyPolicy")]
     public class VideosController : ControllerBase
     {
         private IVideoRepository videoRepository;

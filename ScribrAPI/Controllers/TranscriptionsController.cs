@@ -12,7 +12,7 @@ namespace ScribrAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [EnableCors("MyPolicy")]
+    // [EnableCors("MyPolicy")]
     public class TranscriptionsController : ControllerBase
     {
         private readonly scriberContext _context;

@@ -54,7 +54,7 @@ namespace ScribrAPI
                 });
             });
             // Add Cors
-
+            /*
             services.AddCors(o => o.AddPolicy("MyPolicy", builder => {
 
               builder.AllowAnyOrigin()
@@ -65,6 +65,7 @@ namespace ScribrAPI
 
 
             }));
+      */
             //Registering Azure SignalR service
             services.AddSignalR();
         }
