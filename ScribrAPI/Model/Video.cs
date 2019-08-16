@@ -31,8 +31,8 @@ namespace ScribrAPI.Model
         public bool IsFavourite { get; set; }
         [Column("like")]
         public int like { get; set; }
-    [Column("dislike")]
-    public int dislike { get; set; }
+        [Column("dislike")]
+        public int dislike { get; set; }
 
     [InverseProperty("Video")]
         public virtual ICollection<Transcription> Transcription { get; set; }
@@ -62,7 +62,7 @@ namespace ScribrAPI.Model
         [DataMember]
         public int like { get; set; }
 
-    [DataMember]
-    public int dislike { get; set; }
+        [DataMember]
+        public int dislike { get; set; }
   }
 }
