@@ -54,7 +54,7 @@ namespace ScribrAPI
                 });
             });
             // Add Cors
-            /*
+            
             services.AddCors(o => o.AddPolicy("MyPolicy", builder => {
 
               builder.AllowAnyOrigin()
@@ -65,7 +65,7 @@ namespace ScribrAPI
 
 
             }));
-      */
+      
             //Registering Azure SignalR service
             services.AddSignalR();
         }
@@ -73,7 +73,7 @@ namespace ScribrAPI
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-
+            /*
             // Make sure the CORS middleware is ahead of SignalR.
             app.UseCors(builder =>
             {
@@ -82,7 +82,7 @@ namespace ScribrAPI
                     .AllowAnyMethod()
                     .AllowCredentials();
             });
-
+            */
             // SignalR
             app.UseFileServer();
             app.UseSignalR(routes =>
