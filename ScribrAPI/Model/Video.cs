@@ -1,16 +1,17 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.Serialization;
 
-namespace MyVideosWebApplication.Model
+namespace ScribrAPI.Model
 {
-    public partial class MyVideos
+    [Table("Video")]
+    public partial class Video
     {
-        public MyVideos()
+        public Video()
         {
-            Comment = new HashSet<Comment>();
+            Transcription = new HashSet<Transcription>();
         }
 
         public int VideoId { get; set; }
@@ -28,37 +29,30 @@ namespace MyVideosWebApplication.Model
         public string ThumbnailUrl { get; set; }
         [Column("isFavourite")]
         public bool IsFavourite { get; set; }
-        [Column("count")]
-        public int Count { get; set; }
 
         [InverseProperty("Video")]
-        public virtual ICollection<Comment> Comment { get; set; }
+        public virtual ICollection<Transcription> Transcription { get; set; }
     }
 
     [DataContract]
     public class VideoDTO
     {
-      [DataMember]
-      public int VideoId { get; set; }
+        [DataMember]
+        public int VideoId { get; set; }
 
-      [DataMember]
-      public string VideoTitle { get; set; }
+        [DataMember]
+        public string VideoTitle { get; set; }
 
-      [DataMember]
-      public int VideoLength { get; set; }
+        [DataMember]
+        public int VideoLength { get; set; }
 
-      [DataMember]
-      public string WebUrl { get; set; }
+        [DataMember]
+        public string WebUrl { get; set; }
 
-      [DataMember]
-      public string ThumbnailUrl { get; set; }
+        [DataMember]
+        public string ThumbnailUrl { get; set; }
 
-      [DataMember]
-      public bool IsFavourite { get; set; }
-
-      [DataMember]
-      public bool Count { get; set; }
+        [DataMember]
+        public bool IsFavourite { get; set; }
     }
-
-
 }

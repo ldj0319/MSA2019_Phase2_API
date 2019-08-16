@@ -1,11 +1,11 @@
-{
+﻿{
   "$schema": "http://json.schemastore.org/launchsettings.json",
   "iisSettings": {
     "windowsAuthentication": false, 
     "anonymousAuthentication": true, 
     "iisExpress": {
-      "applicationUrl": "http://localhost:54002",
-      "sslPort": 44389
+      "applicationUrl": "http://localhost:51659",
+      "sslPort": 44303
     }
   },
   "profiles": {
@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "MyVideosWebApplication": {
+    "ScribrAPI": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "",
