@@ -124,7 +124,8 @@ namespace ScribrAPI.Helper
                 VideoLength = duration,
                 IsFavourite = false,
                 ThumbnailUrl = thumbnailURL,
-                like = 0
+                like = 0,
+                dislike = 0
             };
 
             return video;
