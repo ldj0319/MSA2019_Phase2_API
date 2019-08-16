@@ -76,7 +76,7 @@ namespace ScribrAPI
             // Make sure the CORS middleware is ahead of SignalR.
             app.UseCors(builder =>
             {
-                builder.WithOrigins("https://jaemsa2019phase2test2.azurewebsites.net")
+                builder.WithOrigins("http://localhost:3000/")
                     .AllowAnyHeader()
                     .AllowAnyMethod()
                     .AllowCredentials();
