@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using ScribrAPI.Model;
 using System;
 using System.Collections.Generic;
@@ -123,7 +123,8 @@ namespace ScribrAPI.Helper
                 WebUrl = videoUrl,
                 VideoLength = duration,
                 IsFavourite = false,
-                ThumbnailUrl = thumbnailURL
+                ThumbnailUrl = thumbnailURL,
+                like = 0
             };
 
             return video;
