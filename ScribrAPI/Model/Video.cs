@@ -29,8 +29,10 @@ namespace ScribrAPI.Model
         public string ThumbnailUrl { get; set; }
         [Column("isFavourite")]
         public bool IsFavourite { get; set; }
+        [Column("like")]
+        public int like { get; set; }
 
-        [InverseProperty("Video")]
+    [InverseProperty("Video")]
         public virtual ICollection<Transcription> Transcription { get; set; }
     }
 
