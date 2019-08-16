@@ -1,9 +1,8 @@
 using System;
-using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace ScribrAPI.Model
+namespace MyVideosWebApplication.Model
 {
     public partial class scriberContext : DbContext
     {
@@ -16,8 +15,8 @@ namespace ScribrAPI.Model
         {
         }
 
-        public virtual DbSet<Transcription> Transcription { get; set; }
-        public virtual DbSet<Video> Video { get; set; }
+        public virtual DbSet<Comment> Comment { get; set; }
+        public virtual DbSet<MyVideos> MyVideos { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -30,27 +29,31 @@ namespace ScribrAPI.Model
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasAnnotation("ProductVersion", "2.2.4-servicing-10062");
+            modelBuilder.HasAnnotation("ProductVersion", "2.2.6-servicing-10079");
 
-            modelBuilder.Entity<Transcription>(entity =>
+            modelBuilder.Entity<Comment>(entity =>
             {
-                entity.Property(e => e.Phrase).IsUnicode(false);
+                entity.Property(e => e.Comments).IsUnicode(false);
 
                 entity.HasOne(d => d.Video)
-                    .WithMany(p => p.Transcription)
+                    .WithMany(p => p.Comment)
                     .HasForeignKey(d => d.VideoId)
                     .OnDelete(DeleteBehavior.Cascade)
-                    .HasConstraintName("VideoId");
+                    .HasConstraintName("MyVideosId");
             });
 
-            modelBuilder.Entity<Video>(entity =>
+            modelBuilder.Entity<MyVideos>(entity =>
             {
+                entity.HasKey(e => e.VideoId)
+                    .HasName("PK__MyVideos__BAE5126AF9FAFC69");
+
                 entity.Property(e => e.ThumbnailUrl).IsUnicode(false);
 
                 entity.Property(e => e.VideoTitle).IsUnicode(false);
 
                 entity.Property(e => e.WebUrl).IsUnicode(false);
             });
+
         }
     }
 }
