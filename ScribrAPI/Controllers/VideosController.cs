@@ -200,7 +200,6 @@ namespace ScribrAPI.Controllers
                 ThumbnailUrl = video.ThumbnailUrl,
                 IsFavourite = video.IsFavourite,
                 // like = video.like,
-                // dislike = video.dislike,
                 Transcription = video.Transcription.Where(tran => tran.Phrase.Contains(searchString)).ToList()
             }).ToListAsync();
 
